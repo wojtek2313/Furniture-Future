@@ -13,6 +13,8 @@
 		2EC637EE21672955009FE6EB /* FurnitureFuture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EC637EC21672955009FE6EB /* FurnitureFuture.xcdatamodeld */; };
 		2EC637F021672956009FE6EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EC637EF21672956009FE6EB /* Assets.xcassets */; };
 		2EC637F321672956009FE6EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC637F121672956009FE6EB /* LaunchScreen.storyboard */; };
+		2EC637FE21674B66009FE6EB /* ButtonFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC637FD21674B66009FE6EB /* ButtonFrames.swift */; };
+		2EC6380021674C2E009FE6EB /* ImageViewFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC637FF21674C2E009FE6EB /* ImageViewFrames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2EC637EF21672956009FE6EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EC637F221672956009FE6EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EC637F421672956009FE6EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EC637FD21674B66009FE6EB /* ButtonFrames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFrames.swift; sourceTree = "<group>"; };
+		2EC637FF21674C2E009FE6EB /* ImageViewFrames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewFrames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,9 @@
 		2EC637E421672955009FE6EB /* FurnitureFuture */ = {
 			isa = PBXGroup;
 			children = (
+				2EC637FC21674B2B009FE6EB /* ViewModel */,
+				2EC637FB21674B14009FE6EB /* Model */,
+				2EC637FA21674AF6009FE6EB /* Views */,
 				2EC637E521672955009FE6EB /* AppDelegate.swift */,
 				2EC637E721672955009FE6EB /* ViewController.swift */,
 				2EC637E921672955009FE6EB /* Main.storyboard */,
@@ -65,6 +72,29 @@
 				2EC637EC21672955009FE6EB /* FurnitureFuture.xcdatamodeld */,
 			);
 			path = FurnitureFuture;
+			sourceTree = "<group>";
+		};
+		2EC637FA21674AF6009FE6EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EC637FD21674B66009FE6EB /* ButtonFrames.swift */,
+				2EC637FF21674C2E009FE6EB /* ImageViewFrames.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2EC637FB21674B14009FE6EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2EC637FC21674B2B009FE6EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +171,8 @@
 				2EC637E821672955009FE6EB /* ViewController.swift in Sources */,
 				2EC637E621672955009FE6EB /* AppDelegate.swift in Sources */,
 				2EC637EE21672955009FE6EB /* FurnitureFuture.xcdatamodeld in Sources */,
+				2EC637FE21674B66009FE6EB /* ButtonFrames.swift in Sources */,
+				2EC6380021674C2E009FE6EB /* ImageViewFrames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
