@@ -126,7 +126,7 @@
                                     <constraint firstAttribute="height" constant="37" id="D3I-Zi-wLF"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9RF-oU-OSm">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MAIL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9RF-oU-OSm">
                                 <rect key="frame" x="74" y="191" width="172" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="FMT-YV-ecD"/>
@@ -149,7 +149,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -245,9 +245,9 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9XB-ff-fJX">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MAIL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9XB-ff-fJX">
                                 <rect key="frame" x="74" y="191" width="172" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="dzA-lc-ncj"/>
@@ -298,6 +298,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quD-QL-6kr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </arscnView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y8b-qF-39C">
                                 <rect key="frame" x="16" y="37" width="79.5" height="8"/>
                                 <subviews>
@@ -343,9 +346,13 @@
                         <constraints>
                             <constraint firstItem="y8b-qF-39C" firstAttribute="top" secondItem="fHM-9f-1eG" secondAttribute="top" constant="17" id="4ZN-H9-x09"/>
                             <constraint firstItem="Rfr-wz-rQ2" firstAttribute="centerX" secondItem="2dU-pD-2n8" secondAttribute="centerX" id="TYk-lT-63K"/>
+                            <constraint firstItem="quD-QL-6kr" firstAttribute="bottom" secondItem="fHM-9f-1eG" secondAttribute="bottom" id="Uxd-Vu-zjf"/>
                             <constraint firstItem="2av-Np-vSd" firstAttribute="top" secondItem="y8b-qF-39C" secondAttribute="bottom" constant="8" id="VhC-mT-ZS5"/>
+                            <constraint firstItem="quD-QL-6kr" firstAttribute="trailing" secondItem="fHM-9f-1eG" secondAttribute="trailing" id="YtU-ha-hwD"/>
                             <constraint firstItem="2av-Np-vSd" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" constant="16" id="dDJ-ea-ReS"/>
                             <constraint firstItem="y8b-qF-39C" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" constant="16" id="gGd-Wf-JFY"/>
+                            <constraint firstItem="quD-QL-6kr" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" id="ivX-xQ-AMa"/>
+                            <constraint firstItem="quD-QL-6kr" firstAttribute="top" secondItem="2dU-pD-2n8" secondAttribute="top" id="nHJ-aM-aLp"/>
                             <constraint firstItem="fHM-9f-1eG" firstAttribute="bottom" secondItem="Rfr-wz-rQ2" secondAttribute="bottom" constant="20" id="r8h-MV-EKr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fHM-9f-1eG"/>
