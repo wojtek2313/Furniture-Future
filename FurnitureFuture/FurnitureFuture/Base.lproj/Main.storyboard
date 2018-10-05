@@ -183,10 +183,10 @@
             </objects>
             <point key="canvasLocation" x="945" y="524"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Model-->
         <scene sceneID="aJ1-v1-9PN">
             <objects>
-                <viewController id="PdU-lR-oba" sceneMemberID="viewController">
+                <viewController id="PdU-lR-oba" customClass="LogInViewModel" customModule="FurnitureFuture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gwj-TX-cUA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,6 +285,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dnA-qA-EA6"/>
                     </view>
+                    <connections>
+                        <outlet property="mailTextfield" destination="9XB-ff-fJX" id="IYS-Ht-PNE"/>
+                        <outlet property="passTextfield" destination="3tk-Ja-m0u" id="rdS-a4-Cxp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYj-4n-6dp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

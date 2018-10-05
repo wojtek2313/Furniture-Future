@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E20D0902167F322009BC085 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20D08F2167F322009BC085 /* LogInViewModel.swift */; };
 		2EC637E621672955009FE6EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC637E521672955009FE6EB /* AppDelegate.swift */; };
 		2EC637E821672955009FE6EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC637E721672955009FE6EB /* ViewController.swift */; };
 		2EC637EB21672955009FE6EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC637E921672955009FE6EB /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E20D08F2167F322009BC085 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		2EC637E221672955009FE6EB /* FurnitureFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC637E521672955009FE6EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EC637E721672955009FE6EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		2EC637FC21674B2B009FE6EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2E20D08F2167F322009BC085 /* LogInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				2EC637E621672955009FE6EB /* AppDelegate.swift in Sources */,
 				2EC637EE21672955009FE6EB /* FurnitureFuture.xcdatamodeld in Sources */,
 				2EC637FE21674B66009FE6EB /* ButtonFrames.swift in Sources */,
+				2E20D0902167F322009BC085 /* LogInViewModel.swift in Sources */,
 				2EC6380021674C2E009FE6EB /* ImageViewFrames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
