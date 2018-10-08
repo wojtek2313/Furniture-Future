@@ -213,6 +213,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.14293922318697008" green="0.47785637446635743" blue="0.038562670153373398" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="startButton:" destination="PdU-lR-oba" eventType="touchUpInside" id="bHR-Pc-kjy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t63-kx-FFP">
                                 <rect key="frame" x="126" y="268" width="68" height="15"/>
@@ -288,6 +291,7 @@
                     <connections>
                         <outlet property="mailTextfield" destination="9XB-ff-fJX" id="IYS-Ht-PNE"/>
                         <outlet property="passTextfield" destination="3tk-Ja-m0u" id="rdS-a4-Cxp"/>
+                        <segue destination="hi7-CW-FTP" kind="show" identifier="LogIn" id="Opz-Y7-FBX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYj-4n-6dp" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -37,4 +37,8 @@ class LogInViewModel: UIViewController, UITextFieldDelegate {
         passTextfield.resignFirstResponder()
         return true
     }
+    
+    @IBAction func startButton(_ sender: Any) {
+        loginModel.logIn(mail: mailTextfield.text!, pass: passTextfield.text!, vc: self)
+    }
 }

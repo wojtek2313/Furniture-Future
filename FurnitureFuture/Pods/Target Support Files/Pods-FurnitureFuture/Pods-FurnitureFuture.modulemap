@@ -1,0 +1,6 @@
+framework module Pods_FurnitureFuture {
+  umbrella header "Pods-FurnitureFuture-umbrella.h"
+
+  export *
+  module * { export * }
+}
