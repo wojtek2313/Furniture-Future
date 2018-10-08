@@ -13,6 +13,8 @@ class LogInViewModel: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mailTextfield: UITextField!
     @IBOutlet weak var passTextfield: UITextField!
     
+    let loginModel = LoginModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
