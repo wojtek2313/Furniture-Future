@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E20D0902167F322009BC085 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20D08F2167F322009BC085 /* LogInViewModel.swift */; };
+		2E9EAF76216B5D06004B173F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E9EAF75216B5D06004B173F /* GoogleService-Info.plist */; };
 		2EC637E621672955009FE6EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC637E521672955009FE6EB /* AppDelegate.swift */; };
 		2EC637E821672955009FE6EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC637E721672955009FE6EB /* ViewController.swift */; };
 		2EC637EB21672955009FE6EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC637E921672955009FE6EB /* Main.storyboard */; };
@@ -15,9 +17,14 @@
 		2EC637F321672956009FE6EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC637F121672956009FE6EB /* LaunchScreen.storyboard */; };
 		2EC637FE21674B66009FE6EB /* ButtonFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC637FD21674B66009FE6EB /* ButtonFrames.swift */; };
 		2EC6380021674C2E009FE6EB /* ImageViewFrames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC637FF21674C2E009FE6EB /* ImageViewFrames.swift */; };
+		2EE44524216B57D500C5CE8F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE44523216B57D500C5CE8F /* LoginModel.swift */; };
+		9B8CC003FC4AEC65053F70E0 /* Pods_FurnitureFuture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3AAFA2DC44F7C286B51FF /* Pods_FurnitureFuture.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CFAFF6F870CAED4A3DEF463 /* Pods-FurnitureFuture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureFuture.release.xcconfig"; path = "Pods/Target Support Files/Pods-FurnitureFuture/Pods-FurnitureFuture.release.xcconfig"; sourceTree = "<group>"; };
+		2E20D08F2167F322009BC085 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		2E9EAF75216B5D06004B173F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EC637E221672955009FE6EB /* FurnitureFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC637E521672955009FE6EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EC637E721672955009FE6EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +35,9 @@
 		2EC637F421672956009FE6EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EC637FD21674B66009FE6EB /* ButtonFrames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFrames.swift; sourceTree = "<group>"; };
 		2EC637FF21674C2E009FE6EB /* ImageViewFrames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewFrames.swift; sourceTree = "<group>"; };
+		2EE44523216B57D500C5CE8F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		6D94DE6CB0B0CFA99EDAC90F /* Pods-FurnitureFuture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureFuture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FurnitureFuture/Pods-FurnitureFuture.debug.xcconfig"; sourceTree = "<group>"; };
+		A1F3AAFA2DC44F7C286B51FF /* Pods_FurnitureFuture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureFuture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8CC003FC4AEC65053F70E0 /* Pods_FurnitureFuture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +57,8 @@
 			children = (
 				2EC637E421672955009FE6EB /* FurnitureFuture */,
 				2EC637E321672955009FE6EB /* Products */,
+				9535D8ED0F2B5587194454F8 /* Pods */,
+				5760E8E1569642D452F6030C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +83,7 @@
 				2EC637F121672956009FE6EB /* LaunchScreen.storyboard */,
 				2EC637F421672956009FE6EB /* Info.plist */,
 				2EC637EC21672955009FE6EB /* FurnitureFuture.xcdatamodeld */,
+				2E9EAF75216B5D06004B173F /* GoogleService-Info.plist */,
 			);
 			path = FurnitureFuture;
 			sourceTree = "<group>";
@@ -86,6 +100,7 @@
 		2EC637FB21674B14009FE6EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2EE44523216B57D500C5CE8F /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -93,8 +108,26 @@
 		2EC637FC21674B2B009FE6EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2E20D08F2167F322009BC085 /* LogInViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5760E8E1569642D452F6030C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1F3AAFA2DC44F7C286B51FF /* Pods_FurnitureFuture.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9535D8ED0F2B5587194454F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D94DE6CB0B0CFA99EDAC90F /* Pods-FurnitureFuture.debug.xcconfig */,
+				2CFAFF6F870CAED4A3DEF463 /* Pods-FurnitureFuture.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EC637F721672956009FE6EB /* Build configuration list for PBXNativeTarget "FurnitureFuture" */;
 			buildPhases = (
+				EB69D2F494716C013FC2C4D2 /* [CP] Check Pods Manifest.lock */,
 				2EC637DE21672955009FE6EB /* Sources */,
 				2EC637DF21672955009FE6EB /* Frameworks */,
 				2EC637E021672955009FE6EB /* Resources */,
+				594BF1513292C435A7F7860E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,12 +191,70 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EC637F321672956009FE6EB /* LaunchScreen.storyboard in Resources */,
+				2E9EAF76216B5D06004B173F /* GoogleService-Info.plist in Resources */,
 				2EC637F021672956009FE6EB /* Assets.xcassets in Resources */,
 				2EC637EB21672955009FE6EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		594BF1513292C435A7F7860E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FurnitureFuture/Pods-FurnitureFuture-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/iProgressHUD/iProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FurnitureFuture/Pods-FurnitureFuture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB69D2F494716C013FC2C4D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FurnitureFuture-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2EC637DE21672955009FE6EB /* Sources */ = {
@@ -171,7 +264,9 @@
 				2EC637E821672955009FE6EB /* ViewController.swift in Sources */,
 				2EC637E621672955009FE6EB /* AppDelegate.swift in Sources */,
 				2EC637EE21672955009FE6EB /* FurnitureFuture.xcdatamodeld in Sources */,
+				2EE44524216B57D500C5CE8F /* LoginModel.swift in Sources */,
 				2EC637FE21674B66009FE6EB /* ButtonFrames.swift in Sources */,
+				2E20D0902167F322009BC085 /* LogInViewModel.swift in Sources */,
 				2EC6380021674C2E009FE6EB /* ImageViewFrames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +411,7 @@
 		};
 		2EC637F821672956009FE6EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D94DE6CB0B0CFA99EDAC90F /* Pods-FurnitureFuture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -334,6 +430,7 @@
 		};
 		2EC637F921672956009FE6EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CFAFF6F870CAED4A3DEF463 /* Pods-FurnitureFuture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
