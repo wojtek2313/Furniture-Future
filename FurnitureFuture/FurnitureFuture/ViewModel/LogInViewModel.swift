@@ -23,9 +23,9 @@ class LogInViewModel: UIViewController, UITextFieldDelegate {
         passTextfield.delegate = self
         
         // gestures:
-        let swipeUpGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.goBack(sender:)))
-        swipeUpGesture.direction = .down
-        self.view.addGestureRecognizer(swipeUpGesture)
+        let swipeDownGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.goBack(sender:)))
+        swipeDownGesture.direction = .down
+        self.view.addGestureRecognizer(swipeDownGesture)
     }
     
     @objc func goBack(sender: UISwipeGestureRecognizer) {
