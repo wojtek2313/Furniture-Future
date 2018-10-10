@@ -19,12 +19,12 @@ class LoginModel {
                     SCLAlertView().showError("Error!", subTitle: "\(error!.localizedDescription)", closeButtonTitle: "OK")
                 } else {
                     SCLAlertView().showSuccess("Congratulations!", subTitle: "You are logged in!")
+                    sleep(2)
+                    vc.performSegue(withIdentifier: "LogIn", sender: nil)
                 }
             }
         } else {
             SCLAlertView().showError("Error!", subTitle: "Fill all of the gaps!", closeButtonTitle: "OK")
-            sleep(2)
-            vc.performSegue(withIdentifier: "LogIn", sender: nil)
         }
     }
 }
