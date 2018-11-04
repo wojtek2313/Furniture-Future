@@ -309,10 +309,10 @@
             </objects>
             <point key="canvasLocation" x="945" y="-218"/>
         </scene>
-        <!--View Controller-->
+        <!--Design View Model-->
         <scene sceneID="gEK-tH-dg1">
             <objects>
-                <viewController id="hi7-CW-FTP" sceneMemberID="viewController">
+                <viewController id="hi7-CW-FTP" customClass="DesignViewModel" customModule="FurnitureFuture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2dU-pD-2n8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -357,7 +357,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfr-wz-rQ2">
-                                <rect key="frame" x="144" y="428" width="32" height="32"/>
+                                <rect key="frame" x="130" y="400" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ErC-hR-XSJ"/>
+                                    <constraint firstAttribute="width" constant="60" id="MNn-J1-EJo"/>
+                                </constraints>
                                 <state key="normal" image="MenuBtn"/>
                             </button>
                         </subviews>
@@ -376,6 +380,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fHM-9f-1eG"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="quD-QL-6kr" id="wtB-1j-GMM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exI-aB-FKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
