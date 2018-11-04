@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="135" y="132.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Model-->
         <scene sceneID="y3l-dd-mOf">
             <objects>
-                <viewController id="78z-Zz-Y7F" sceneMemberID="viewController">
+                <viewController id="78z-Zz-Y7F" customClass="SignUpViewModel" customModule="FurnitureFuture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xIF-pA-Zd3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,6 +118,9 @@
                                 <state key="normal" title="CREATE ACCOUNT">
                                     <color key="titleColor" red="0.14293922319999999" green="0.47785637450000001" blue="0.038562670149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="createButton:" destination="78z-Zz-Y7F" eventType="touchUpInside" id="Mcm-gP-OFW"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iPh-hx-wKL" customClass="ImageViewFrames" customModule="FurnitureFuture" customModuleProvider="target">
                                 <rect key="frame" x="63" y="181" width="194" height="37"/>
@@ -178,6 +181,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lf2-vS-lxz"/>
                     </view>
+                    <connections>
+                        <outlet property="mailTextField" destination="9RF-oU-OSm" id="BAP-HS-hR1"/>
+                        <outlet property="passTextField" destination="93h-xY-Sgr" id="h1h-o0-nq8"/>
+                        <segue destination="hi7-CW-FTP" kind="show" identifier="SingUp" id="L3Y-vL-DAW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NN-Ad-RtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -462,4 +470,7 @@
         <image name="Oval" width="13" height="13"/>
         <image name="SignInButton" width="102" height="76"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="L3Y-vL-DAW"/>
+    </inferredMetricsTieBreakers>
 </document>
