@@ -70,6 +70,7 @@
 				2EC637F421672956009FE6EB /* Info.plist */,
 				2EC637EC21672955009FE6EB /* FurnitureFuture.xcdatamodeld */,
 				2E9EAF75216B5D06004B173F /* GoogleService-Info.plist */,
+				2EF72435218F7D3F00341C1F /* Models.scnassets */,
 				2EC637EF21672956009FE6EB /* Assets.xcassets */,
 				2EC637E521672955009FE6EB /* AppDelegate.swift */,
 			);
@@ -97,7 +98,6 @@
 		2EC637E421672955009FE6EB /* FurnitureFuture */ = {
 			isa = PBXGroup;
 			children = (
-				2EF72435218F7D3F00341C1F /* Models.scnassets */,
 				2E6808EC218EF5C800076C11 /* Resources */,
 				2EC637FC21674B2B009FE6EB /* ViewModel */,
 				2EC637FB21674B14009FE6EB /* Model */,

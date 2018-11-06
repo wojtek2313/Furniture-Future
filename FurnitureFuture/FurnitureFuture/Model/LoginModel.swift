@@ -18,8 +18,6 @@ class LoginModel {
                 if error != nil {
                     SCLAlertView().showError("Error!", subTitle: "\(error!.localizedDescription)", closeButtonTitle: "OK")
                 } else {
-                    SCLAlertView().showSuccess("Congratulations!", subTitle: "You are logged in!")
-                    sleep(2)
                     vc.performSegue(withIdentifier: "LogIn", sender: nil)
                 }
             }
