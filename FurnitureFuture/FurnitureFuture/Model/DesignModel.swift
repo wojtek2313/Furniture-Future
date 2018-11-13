@@ -81,21 +81,21 @@ class DesignModel {
         }
     }
     
-    func showPhotoButton(photoButton: UIButton) {
-        if photoButton.transform == CGAffineTransform(scaleX: 0.0, y: 0.0) {
+    func showPhotoMeasureButton(photoMeasureButton: UIButton) {
+        if photoMeasureButton.transform == CGAffineTransform(scaleX: 0.0, y: 0.0) {
             UIView.animate(withDuration: 0.6, animations: {
-                photoButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+                photoMeasureButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
             }) { _ in
                 UIView.animate(withDuration: 0.6, animations: {
-                    photoButton.transform = CGAffineTransform.identity
+                    photoMeasureButton.transform = CGAffineTransform.identity
                 })
             }
         } else {
             UIView.animate(withDuration: 0.6, animations: {
-                photoButton.transform = CGAffineTransform.identity
+                photoMeasureButton.transform = CGAffineTransform.identity
             }) { _ in
                 UIView.animate(withDuration: 0.6, animations: {
-                    photoButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+                    photoMeasureButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
                 })
             }
         }

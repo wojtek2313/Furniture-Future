@@ -23,6 +23,7 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate,UIImagePickerControll
     @IBOutlet weak var line: UIView!
     @IBOutlet weak var menuConstraint: NSLayoutConstraint!
     @IBOutlet weak var takeAPhotoButton: UIButton!
+    @IBOutlet weak var takeAMeasureButton: UIButton!
     
     
     // Constants
@@ -41,6 +42,7 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate,UIImagePickerControll
         line.isHidden = true
         
         self.takeAPhotoButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        self.takeAMeasureButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         self.minusButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         self.plusButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         
@@ -74,13 +76,21 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate,UIImagePickerControll
     
     // Button in menu just to show/hide photo button
     @IBAction func takeAPhotoButtonTapped(_ sender: Any) {
-        designModel.showPhotoButton(photoButton: takeAPhotoButton)
+        designModel.showPhotoMeasureButton(photoMeasureButton: takeAPhotoButton)
     }
     
     // Action to take a photo
     @IBAction func takeAPhotoButtonPressed(_ sender: Any) {
         let snapShot = self.sceneView.snapshot()
         UIImageWriteToSavedPhotosAlbum(snapShot, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    @IBAction func measurementButtonPressed(_ sender: Any) {
+        designModel.showPhotoMeasureButton(photoMeasureButton: takeAMeasureButton)
+    }
+    
+    @IBAction func takeAMeasureButtonPressed(_ sender: Any) {
+        
     }
     
     @IBAction func logOutButtonPressed(_ sender: Any) {

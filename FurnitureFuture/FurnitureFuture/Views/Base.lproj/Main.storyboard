@@ -321,7 +321,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfr-wz-rQ2">
-                                <rect key="frame" x="130" y="400" width="60" height="60"/>
+                                <rect key="frame" x="130" y="405" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ErC-hR-XSJ"/>
                                     <constraint firstAttribute="width" constant="60" id="MNn-J1-EJo"/>
@@ -397,8 +397,8 @@
                                     <constraint firstAttribute="height" constant="1" id="fuO-B2-emG"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kHq-Qg-1bM">
-                                <rect key="frame" x="-120" y="99" width="108" height="172"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="kHq-Qg-1bM">
+                                <rect key="frame" x="-120" y="99" width="108" height="214"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cb-6W-vYV">
                                         <rect key="frame" x="0.0" y="0.0" width="108" height="52"/>
@@ -410,7 +410,7 @@
                                         <state key="normal" title="Furnitures" image="Furnitures"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyp-sT-JwO">
-                                        <rect key="frame" x="0.0" y="60" width="108" height="52"/>
+                                        <rect key="frame" x="0.0" y="54" width="108" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="108" id="68x-VX-15E"/>
                                             <constraint firstAttribute="height" constant="52" id="Zlp-PG-Q2s"/>
@@ -421,8 +421,20 @@
                                             <action selector="takeAPhotoButtonTapped:" destination="hi7-CW-FTP" eventType="touchUpInside" id="MV4-kE-bdI"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iO3-Ih-P8U">
+                                        <rect key="frame" x="0.0" y="108" width="108" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="b6k-dR-KmD"/>
+                                            <constraint firstAttribute="width" constant="108" id="j1L-pG-Tfd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="         Measure" image="MeasurmentButton"/>
+                                        <connections>
+                                            <action selector="measurementButtonPressed:" destination="hi7-CW-FTP" eventType="touchUpInside" id="fkx-A8-fJ4"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc9-Rd-EVl">
-                                        <rect key="frame" x="0.0" y="120" width="108" height="52"/>
+                                        <rect key="frame" x="0.0" y="162" width="108" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="8sM-RI-UdY"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="108" id="EDF-oi-Uwh"/>
@@ -436,15 +448,25 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5g-WE-OKs">
-                                <rect key="frame" x="254" y="410.5" width="39" height="39"/>
+                                <rect key="frame" x="254" y="415.5" width="39" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="drc-7b-SXy"/>
                                     <constraint firstAttribute="width" constant="39" id="qCC-Q1-8aT"/>
                                 </constraints>
                                 <state key="normal" image="TakeAPhoto"/>
                                 <connections>
-                                    <action selector="minusButtonTapped:" destination="hi7-CW-FTP" eventType="touchUpInside" id="HPQ-KY-wNF"/>
                                     <action selector="takeAPhotoButtonPressed:" destination="hi7-CW-FTP" eventType="touchUpInside" id="Lat-ss-pOs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWi-Qm-1BQ">
+                                <rect key="frame" x="27" y="415.5" width="39" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="Uyg-8i-gIa"/>
+                                    <constraint firstAttribute="height" constant="39" id="pIv-Uj-GqD"/>
+                                </constraints>
+                                <state key="normal" image="TakeAMeasureButton"/>
+                                <connections>
+                                    <action selector="takeAMeasureButtonPressed:" destination="hi7-CW-FTP" eventType="touchUpInside" id="t57-83-yIH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -465,9 +487,11 @@
                             <constraint firstItem="3Xi-9o-Vap" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" id="fzU-oG-Wit"/>
                             <constraint firstItem="quD-QL-6kr" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" id="ivX-xQ-AMa"/>
                             <constraint firstItem="kHq-Qg-1bM" firstAttribute="top" secondItem="3Xi-9o-Vap" secondAttribute="bottom" constant="8" id="k9e-xz-vFf"/>
+                            <constraint firstItem="cWi-Qm-1BQ" firstAttribute="centerY" secondItem="Rfr-wz-rQ2" secondAttribute="centerY" id="lVJ-ga-VXf"/>
                             <constraint firstItem="fHM-9f-1eG" firstAttribute="trailing" secondItem="o5g-WE-OKs" secondAttribute="trailing" constant="27" id="lq3-zZ-TN8"/>
                             <constraint firstItem="quD-QL-6kr" firstAttribute="top" secondItem="2dU-pD-2n8" secondAttribute="top" id="nHJ-aM-aLp"/>
-                            <constraint firstItem="fHM-9f-1eG" firstAttribute="bottom" secondItem="Rfr-wz-rQ2" secondAttribute="bottom" constant="20" id="r8h-MV-EKr"/>
+                            <constraint firstItem="fHM-9f-1eG" firstAttribute="bottom" secondItem="Rfr-wz-rQ2" secondAttribute="bottom" constant="15" id="r8h-MV-EKr"/>
+                            <constraint firstItem="cWi-Qm-1BQ" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" constant="27" id="uC5-1E-R8q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fHM-9f-1eG"/>
                     </view>
@@ -481,6 +505,7 @@
                         <outlet property="navigationBar" destination="KOo-Iu-gqL" id="10S-W8-iSO"/>
                         <outlet property="plusButton" destination="lDV-R5-nEQ" id="f9A-b8-ITt"/>
                         <outlet property="sceneView" destination="quD-QL-6kr" id="wtB-1j-GMM"/>
+                        <outlet property="takeAMeasureButton" destination="cWi-Qm-1BQ" id="9bW-TN-ZEP"/>
                         <outlet property="takeAPhotoButton" destination="o5g-WE-OKs" id="sJm-sZ-frz"/>
                     </connections>
                 </viewController>
@@ -576,11 +601,13 @@
         <image name="LogInButton" width="102" height="76"/>
         <image name="LogOut" width="43" height="24"/>
         <image name="Logo" width="91" height="116"/>
+        <image name="MeasurmentButton" width="28" height="33"/>
         <image name="MenuButton" width="35" height="24"/>
         <image name="MinusBtn" width="39" height="39"/>
         <image name="Photo" width="35" height="23"/>
         <image name="PlusBtn" width="39" height="39"/>
         <image name="SignInButton" width="102" height="76"/>
+        <image name="TakeAMeasureButton" width="55" height="55"/>
         <image name="TakeAPhoto" width="55" height="55"/>
         <image name="TinyLogo" width="45" height="57"/>
     </resources>
