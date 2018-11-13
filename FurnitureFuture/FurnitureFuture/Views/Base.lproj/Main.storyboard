@@ -469,12 +469,23 @@
                                     <action selector="takeAMeasureButtonPressed:" destination="hi7-CW-FTP" eventType="touchUpInside" id="t57-83-yIH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0f-kX-baP">
+                                <rect key="frame" x="100" y="230" width="120" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="Oaa-Ki-BMB"/>
+                                    <constraint firstAttribute="width" constant="120" id="vf2-Y9-ywz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kHq-Qg-1bM" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" constant="-120" id="33X-X8-Ayx"/>
                             <constraint firstItem="fHM-9f-1eG" firstAttribute="trailing" secondItem="3Xi-9o-Vap" secondAttribute="trailing" constant="33" id="5Z6-Xt-49Z"/>
                             <constraint firstItem="KOo-Iu-gqL" firstAttribute="top" secondItem="2dU-pD-2n8" secondAttribute="top" id="67J-Fg-Cce"/>
+                            <constraint firstItem="n0f-kX-baP" firstAttribute="centerX" secondItem="2dU-pD-2n8" secondAttribute="centerX" id="6JQ-xM-UUw"/>
                             <constraint firstItem="KOo-Iu-gqL" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" id="75H-Ut-r1B"/>
                             <constraint firstItem="o5g-WE-OKs" firstAttribute="centerY" secondItem="Rfr-wz-rQ2" secondAttribute="centerY" id="EEZ-Hn-GLg"/>
                             <constraint firstItem="tca-WH-wpb" firstAttribute="centerY" secondItem="2dU-pD-2n8" secondAttribute="centerY" id="LcY-MZ-zqc"/>
@@ -485,6 +496,7 @@
                             <constraint firstItem="quD-QL-6kr" firstAttribute="trailing" secondItem="fHM-9f-1eG" secondAttribute="trailing" id="YtU-ha-hwD"/>
                             <constraint firstItem="fHM-9f-1eG" firstAttribute="trailing" secondItem="tca-WH-wpb" secondAttribute="trailing" constant="27" id="e17-JU-yQ2"/>
                             <constraint firstItem="3Xi-9o-Vap" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" id="fzU-oG-Wit"/>
+                            <constraint firstItem="n0f-kX-baP" firstAttribute="centerY" secondItem="2dU-pD-2n8" secondAttribute="centerY" id="iFH-UM-Afy"/>
                             <constraint firstItem="quD-QL-6kr" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" id="ivX-xQ-AMa"/>
                             <constraint firstItem="kHq-Qg-1bM" firstAttribute="top" secondItem="3Xi-9o-Vap" secondAttribute="bottom" constant="8" id="k9e-xz-vFf"/>
                             <constraint firstItem="cWi-Qm-1BQ" firstAttribute="centerY" secondItem="Rfr-wz-rQ2" secondAttribute="centerY" id="lVJ-ga-VXf"/>
@@ -497,6 +509,7 @@
                     </view>
                     <connections>
                         <outlet property="addOrRemoveButton" destination="Rfr-wz-rQ2" id="vWl-uW-7BS"/>
+                        <outlet property="distanceLabel" destination="n0f-kX-baP" id="lII-AK-46W"/>
                         <outlet property="line" destination="3Xi-9o-Vap" id="jbP-m1-qCa"/>
                         <outlet property="logo" destination="stc-Cd-qod" id="wqY-We-ajk"/>
                         <outlet property="menuButton" destination="Ndx-Mv-96d" id="7hY-wf-E0I"/>

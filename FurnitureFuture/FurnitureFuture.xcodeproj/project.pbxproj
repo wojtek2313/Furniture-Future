@@ -10,6 +10,7 @@
 		2E20D0902167F322009BC085 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20D08F2167F322009BC085 /* LogInViewModel.swift */; };
 		2E27C7C6218F891600C57636 /* DesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E27C7C5218F891600C57636 /* DesignViewModel.swift */; };
 		2E27C7C8218F898900C57636 /* DesignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E27C7C7218F898900C57636 /* DesignModel.swift */; };
+		2E608C36219B6571000F368C /* MeasureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E608C35219B6571000F368C /* MeasureService.swift */; };
 		2E9EAF76216B5D06004B173F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E9EAF75216B5D06004B173F /* GoogleService-Info.plist */; };
 		2EC637E621672955009FE6EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC637E521672955009FE6EB /* AppDelegate.swift */; };
 		2EC637EB21672955009FE6EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC637E921672955009FE6EB /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		2E20D08F2167F322009BC085 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		2E27C7C5218F891600C57636 /* DesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignViewModel.swift; sourceTree = "<group>"; };
 		2E27C7C7218F898900C57636 /* DesignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModel.swift; sourceTree = "<group>"; };
+		2E608C35219B6571000F368C /* MeasureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureService.swift; sourceTree = "<group>"; };
 		2E9EAF75216B5D06004B173F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EC637E221672955009FE6EB /* FurnitureFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FurnitureFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC637E521672955009FE6EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				2EF72435218F7D3F00341C1F /* Models.scnassets */,
 				2EC637EF21672956009FE6EB /* Assets.xcassets */,
 				2EC637E521672955009FE6EB /* AppDelegate.swift */,
+				2E608C35219B6571000F368C /* MeasureService.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				2EF72432218F098400341C1F /* SignUpViewModel.swift in Sources */,
 				2E27C7C6218F891600C57636 /* DesignViewModel.swift in Sources */,
 				2E27C7C8218F898900C57636 /* DesignModel.swift in Sources */,
+				2E608C36219B6571000F368C /* MeasureService.swift in Sources */,
 				2EF72434218F0BCB00341C1F /* SignUpModel.swift in Sources */,
 				2EC637FE21674B66009FE6EB /* ButtonFrames.swift in Sources */,
 				2E20D0902167F322009BC085 /* LogInViewModel.swift in Sources */,
