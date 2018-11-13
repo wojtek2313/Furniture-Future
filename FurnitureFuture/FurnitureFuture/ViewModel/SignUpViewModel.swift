@@ -13,7 +13,7 @@ class SignUpViewModel: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     
-    let signUpModel = SingUpModel()
+    let signUpModel = SignUpModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -56,6 +56,8 @@ class DesignModel {
             let results = hitTest.first!
             let node = results.node
             node.removeFromParentNode()
+        } else {
+            SCLAlertView().showError("Not Matched With Any Object!", subTitle: "To remove an object just direct your camera into the object and try to center it on the screen!", closeButtonTitle: "Ok")
         }
     }
     
@@ -79,7 +81,27 @@ class DesignModel {
         }
     }
     
-    func editAddMode(addOrRemoveButton: UIButton, plusButton: UIButton, minusButton: UIButton, logo: UIView, menuButton: UIButton, navigationBar: UIView, line: UIView, ifEditMode: Bool) {
+    func showPhotoButton(photoButton: UIButton) {
+        if photoButton.transform == CGAffineTransform(scaleX: 0.0, y: 0.0) {
+            UIView.animate(withDuration: 0.6, animations: {
+                photoButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+            }) { _ in
+                UIView.animate(withDuration: 0.6, animations: {
+                    photoButton.transform = CGAffineTransform.identity
+                })
+            }
+        } else {
+            UIView.animate(withDuration: 0.6, animations: {
+                photoButton.transform = CGAffineTransform.identity
+            }) { _ in
+                UIView.animate(withDuration: 0.6, animations: {
+                    photoButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+                })
+            }
+        }
+    }
+    
+    func editAddMode(addOrRemoveButton: UIButton, plusButton: UIButton, minusButton: UIButton, logo: UIView, menuButton: UIButton, navigationBar: UIView, line: UIView, ifEditMode: Bool, menuConstraint: NSLayoutConstraint) {
         if ifEditMode {
             
             logo.isHidden = false
@@ -112,6 +134,12 @@ class DesignModel {
             menuButton.isHidden = true
             navigationBar.isHidden = true
             line.isHidden = true
+            
+            if menuConstraint.constant == 20.0 {
+                UIView.animate(withDuration: 0.6, animations: {
+                    menuConstraint.constant = -120.0
+                }, completion:  nil)
+            }
             
             UIView.transition(with: addOrRemoveButton, duration: 1.5, options: .transitionFlipFromBottom, animations: {
                 addOrRemoveButton.setImage(UIImage(named: "AddBtn"), for: .normal)

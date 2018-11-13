@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -184,7 +184,7 @@
                     <connections>
                         <outlet property="mailTextField" destination="9RF-oU-OSm" id="BAP-HS-hR1"/>
                         <outlet property="passTextField" destination="93h-xY-Sgr" id="h1h-o0-nq8"/>
-                        <segue destination="hi7-CW-FTP" kind="show" identifier="SingUp" id="L3Y-vL-DAW"/>
+                        <segue destination="hi7-CW-FTP" kind="show" identifier="SignUp" id="L3Y-vL-DAW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NN-Ad-RtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -435,6 +435,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5g-WE-OKs">
+                                <rect key="frame" x="254" y="410.5" width="39" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="drc-7b-SXy"/>
+                                    <constraint firstAttribute="width" constant="39" id="qCC-Q1-8aT"/>
+                                </constraints>
+                                <state key="normal" image="TakeAPhoto"/>
+                                <connections>
+                                    <action selector="minusButtonTapped:" destination="hi7-CW-FTP" eventType="touchUpInside" id="HPQ-KY-wNF"/>
+                                    <action selector="takeAPhotoButtonPressed:" destination="hi7-CW-FTP" eventType="touchUpInside" id="Lat-ss-pOs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -442,6 +454,7 @@
                             <constraint firstItem="fHM-9f-1eG" firstAttribute="trailing" secondItem="3Xi-9o-Vap" secondAttribute="trailing" constant="33" id="5Z6-Xt-49Z"/>
                             <constraint firstItem="KOo-Iu-gqL" firstAttribute="top" secondItem="2dU-pD-2n8" secondAttribute="top" id="67J-Fg-Cce"/>
                             <constraint firstItem="KOo-Iu-gqL" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" id="75H-Ut-r1B"/>
+                            <constraint firstItem="o5g-WE-OKs" firstAttribute="centerY" secondItem="Rfr-wz-rQ2" secondAttribute="centerY" id="EEZ-Hn-GLg"/>
                             <constraint firstItem="tca-WH-wpb" firstAttribute="centerY" secondItem="2dU-pD-2n8" secondAttribute="centerY" id="LcY-MZ-zqc"/>
                             <constraint firstItem="3Xi-9o-Vap" firstAttribute="top" secondItem="KOo-Iu-gqL" secondAttribute="bottom" id="MSB-Fr-jU1"/>
                             <constraint firstItem="KOo-Iu-gqL" firstAttribute="trailing" secondItem="fHM-9f-1eG" secondAttribute="trailing" id="QRA-2S-1Zn"/>
@@ -452,6 +465,7 @@
                             <constraint firstItem="3Xi-9o-Vap" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" id="fzU-oG-Wit"/>
                             <constraint firstItem="quD-QL-6kr" firstAttribute="leading" secondItem="fHM-9f-1eG" secondAttribute="leading" id="ivX-xQ-AMa"/>
                             <constraint firstItem="kHq-Qg-1bM" firstAttribute="top" secondItem="3Xi-9o-Vap" secondAttribute="bottom" constant="8" id="k9e-xz-vFf"/>
+                            <constraint firstItem="fHM-9f-1eG" firstAttribute="trailing" secondItem="o5g-WE-OKs" secondAttribute="trailing" constant="27" id="lq3-zZ-TN8"/>
                             <constraint firstItem="quD-QL-6kr" firstAttribute="top" secondItem="2dU-pD-2n8" secondAttribute="top" id="nHJ-aM-aLp"/>
                             <constraint firstItem="fHM-9f-1eG" firstAttribute="bottom" secondItem="Rfr-wz-rQ2" secondAttribute="bottom" constant="20" id="r8h-MV-EKr"/>
                         </constraints>
@@ -467,6 +481,7 @@
                         <outlet property="navigationBar" destination="KOo-Iu-gqL" id="10S-W8-iSO"/>
                         <outlet property="plusButton" destination="lDV-R5-nEQ" id="f9A-b8-ITt"/>
                         <outlet property="sceneView" destination="quD-QL-6kr" id="wtB-1j-GMM"/>
+                        <outlet property="takeAPhotoButton" destination="o5g-WE-OKs" id="sJm-sZ-frz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exI-aB-FKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -566,6 +581,7 @@
         <image name="Photo" width="35" height="23"/>
         <image name="PlusBtn" width="39" height="39"/>
         <image name="SignInButton" width="102" height="76"/>
+        <image name="TakeAPhoto" width="55" height="55"/>
         <image name="TinyLogo" width="45" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>

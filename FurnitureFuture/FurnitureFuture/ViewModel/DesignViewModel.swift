@@ -8,8 +8,9 @@
 
 import UIKit
 import ARKit
+import SCLAlertView
 
-class DesignViewModel: UIViewController, ARSCNViewDelegate {
+class DesignViewModel: UIViewController, ARSCNViewDelegate,UIImagePickerControllerDelegate {
     
     // Outlets
     @IBOutlet weak var sceneView: ARSCNView!
@@ -21,6 +22,7 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var line: UIView!
     @IBOutlet weak var menuConstraint: NSLayoutConstraint!
+    @IBOutlet weak var takeAPhotoButton: UIButton!
     
     
     // Constants
@@ -38,11 +40,12 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate {
         navigationBar.isHidden = true
         line.isHidden = true
         
+        self.takeAPhotoButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         self.minusButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         self.plusButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         
         // AR Configuration
-        self.sceneView.debugOptions = [ ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
+        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         self.configuration.planeDetection = .horizontal
         self.sceneView.session.run(configuration)
         self.sceneView.delegate = self
@@ -69,8 +72,15 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate {
         designModel.showMenu(menuConstraint: menuConstraint)
     }
     
+    // Button in menu just to show/hide photo button
     @IBAction func takeAPhotoButtonTapped(_ sender: Any) {
-        
+        designModel.showPhotoButton(photoButton: takeAPhotoButton)
+    }
+    
+    // Action to take a photo
+    @IBAction func takeAPhotoButtonPressed(_ sender: Any) {
+        let snapShot = self.sceneView.snapshot()
+        UIImageWriteToSavedPhotosAlbum(snapShot, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
@@ -93,6 +103,15 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate {
     
     @objc func tap(sender: UITapGestureRecognizer) {
         tapGesture = sender
-        designModel.editAddMode(addOrRemoveButton: addOrRemoveButton, plusButton: plusButton, minusButton: minusButton, logo: logo, menuButton: menuButton, navigationBar: navigationBar, line: line, ifEditMode: designModel.addOrRemove(sender: addOrRemoveButton))
+        designModel.editAddMode(addOrRemoveButton: addOrRemoveButton, plusButton: plusButton, minusButton: minusButton, logo: logo, menuButton: menuButton, navigationBar: navigationBar, line: line, ifEditMode: designModel.addOrRemove(sender: addOrRemoveButton), menuConstraint: menuConstraint)
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        
+        if let error = error {
+            SCLAlertView().showError("Error saving AR scene!", subTitle: error.localizedDescription, closeButtonTitle: "OK")
+        } else {
+            SCLAlertView().showSuccess("Success!", subTitle: "The ARScene is succesfully saved let's send your image to your firends!", closeButtonTitle: "OK")
+        }
     }
 }

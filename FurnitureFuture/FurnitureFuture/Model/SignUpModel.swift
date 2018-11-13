@@ -12,7 +12,7 @@ import UIKit
 import SCLAlertView
 import iProgressHUD
 
-class SingUpModel {
+class SignUpModel {
     var uid: String?
     
     func createByFirebase(mail: String, password: String, vc: UIViewController) {

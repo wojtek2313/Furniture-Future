@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Furniture Future needs to have an acces for your photo library, accept it to save your amazing ar photos</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Let&apos;s access your camera for catching your exciting environment!</string>
 	<key>CFBundleDevelopmentRegion</key>

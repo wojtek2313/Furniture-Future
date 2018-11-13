@@ -22,7 +22,7 @@
 		2EF7242E218EFDFF00341C1F /* ResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7242D218EFDFF00341C1F /* ResetViewModel.swift */; };
 		2EF72430218F00C800341C1F /* ResetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7242F218F00C800341C1F /* ResetModel.swift */; };
 		2EF72432218F098400341C1F /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF72431218F098400341C1F /* SignUpViewModel.swift */; };
-		2EF72434218F0BCB00341C1F /* SingUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF72433218F0BCB00341C1F /* SingUpModel.swift */; };
+		2EF72434218F0BCB00341C1F /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF72433218F0BCB00341C1F /* SignUpModel.swift */; };
 		2EF72436218F7D3F00341C1F /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF72435218F7D3F00341C1F /* Models.scnassets */; };
 		9B8CC003FC4AEC65053F70E0 /* Pods_FurnitureFuture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3AAFA2DC44F7C286B51FF /* Pods_FurnitureFuture.framework */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,7 @@
 		2EF7242D218EFDFF00341C1F /* ResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewModel.swift; sourceTree = "<group>"; };
 		2EF7242F218F00C800341C1F /* ResetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetModel.swift; sourceTree = "<group>"; };
 		2EF72431218F098400341C1F /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		2EF72433218F0BCB00341C1F /* SingUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpModel.swift; sourceTree = "<group>"; };
+		2EF72433218F0BCB00341C1F /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		2EF72435218F7D3F00341C1F /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		6D94DE6CB0B0CFA99EDAC90F /* Pods-FurnitureFuture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FurnitureFuture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FurnitureFuture/Pods-FurnitureFuture.debug.xcconfig"; sourceTree = "<group>"; };
 		A1F3AAFA2DC44F7C286B51FF /* Pods_FurnitureFuture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FurnitureFuture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +122,7 @@
 			children = (
 				2EE44523216B57D500C5CE8F /* LoginModel.swift */,
 				2EF7242F218F00C800341C1F /* ResetModel.swift */,
-				2EF72433218F0BCB00341C1F /* SingUpModel.swift */,
+				2EF72433218F0BCB00341C1F /* SignUpModel.swift */,
 				2E27C7C7218F898900C57636 /* DesignModel.swift */,
 			);
 			path = Model;
@@ -295,7 +295,7 @@
 				2EF72432218F098400341C1F /* SignUpViewModel.swift in Sources */,
 				2E27C7C6218F891600C57636 /* DesignViewModel.swift in Sources */,
 				2E27C7C8218F898900C57636 /* DesignModel.swift in Sources */,
-				2EF72434218F0BCB00341C1F /* SingUpModel.swift in Sources */,
+				2EF72434218F0BCB00341C1F /* SignUpModel.swift in Sources */,
 				2EC637FE21674B66009FE6EB /* ButtonFrames.swift in Sources */,
 				2E20D0902167F322009BC085 /* LogInViewModel.swift in Sources */,
 				2EC6380021674C2E009FE6EB /* ImageViewFrames.swift in Sources */,
@@ -449,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J4563W7S2E;
 				INFOPLIST_FILE = FurnitureFuture/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J4563W7S2E;
 				INFOPLIST_FILE = FurnitureFuture/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
