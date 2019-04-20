@@ -31,7 +31,7 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate,UIImagePickerControll
     let designModel = DesignModel()
     let service = MeasureService()
     let configuration = ARWorldTrackingConfiguration()
-    var selectedItem = "cup"
+    var selectedItem = ""
     var tapGesture: UITapGestureRecognizer!
     var arScale: CGFloat = 0.5
     var startingPosition: SCNNode?
@@ -78,9 +78,17 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate,UIImagePickerControll
         startingPosition = nil
         
         if designModel.addOrRemove(sender: addOrRemoveButton) {
-            let tapLocation = CGPoint(x: sceneView.frame.width / 2 , y: sceneView.frame.height / 2)
-            let hitTest = sceneView.hitTest(tapLocation, types: .existingPlaneUsingExtent)
-            designModel.placeARObject(selectedItem: selectedItem, hitTest: hitTest, tapLocation: tapLocation, sceneView: self.sceneView)
+            if selectedItem == "" {
+                SCLAlertView().showError("Error!",
+                subTitle: "There are any items to place selected!",
+                closeButtonTitle: "OK")
+            } else {
+                let tapLocation = CGPoint(x: sceneView.frame.width / 2 ,
+                y: sceneView.frame.height / 2)
+                let hitTest = sceneView.hitTest(tapLocation, types: .existingPlaneUsingExtent)
+                designModel.placeARObject(selectedItem: selectedItem,
+                hitTest: hitTest, tapLocation: tapLocation, sceneView: self.sceneView)
+            }
         } else {
             let tapLocation = CGPoint(x: sceneView.frame.width / 2 , y: sceneView.frame.height / 2)
             let hitTest = sceneView.hitTest(tapLocation)
@@ -160,8 +168,11 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate,UIImagePickerControll
     }
     
     @objc func tap(sender: UITapGestureRecognizer) {
-        tapGesture = sender
-        designModel.editAddMode(addOrRemoveButton: addOrRemoveButton, plusButton: plusButton, minusButton: minusButton, logo: logo, menuButton: menuButton, navigationBar: navigationBar, line: line, ifEditMode: designModel.addOrRemove(sender: addOrRemoveButton), menuConstraint: menuConstraint)
+        designModel.editAddMode(addOrRemoveButton: addOrRemoveButton,
+        plusButton: plusButton, minusButton: minusButton, logo: logo,
+        menuButton: menuButton, navigationBar: navigationBar,
+        line: line, ifEditMode: designModel.addOrRemove(sender: addOrRemoveButton),
+        menuConstraint: menuConstraint)
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
@@ -182,7 +193,7 @@ class DesignViewModel: UIViewController, ARSCNViewDelegate,UIImagePickerControll
         guard let zDistance = MeasureService.distance3(fromStartingPositionNode: startingPosition, onView: sceneView, cameraRelativePostion: cameraRelativePosition, toEndingPosition: endingPositionNode)?.z else { return }
         
         DispatchQueue.main.async {
-            self.distanceLabel.text = String(format: "Distance: %.2f", MeasureService.distance(x: xDistance, y: yDistance, z: zDistance)) + " m"
+            self.distanceLabel.text = String(format: "Distance: %.2f", xDistance) + " m"
         }
     }
 }

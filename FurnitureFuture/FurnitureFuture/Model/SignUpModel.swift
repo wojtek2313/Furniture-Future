@@ -13,7 +13,7 @@ import SCLAlertView
 import iProgressHUD
 
 class SignUpModel {
-    var uid: String?
+    //var uid: String?
     
     func createByFirebase(mail: String, password: String, vc: UIViewController) {
         if mail != "" && password != "" {
@@ -21,14 +21,16 @@ class SignUpModel {
             
             Auth.auth().createUser(withEmail: mail, password: password) { (user, error) in
                 if error != nil {
-                    _ = SCLAlertView().showError("Error!", subTitle:"\(String(describing: error!.localizedDescription))", closeButtonTitle:"OK")
-                } else {
-                    self.uid = Auth.auth().currentUser?.uid
-                    vc.view.dismissProgress()
+                    _ = SCLAlertView().showError("Error!",
+                    subTitle:"\(String(describing: error!.localizedDescription))",
+                    closeButtonTitle:"OK")
                     
+                } else {
+                    vc.view.dismissProgress()
                     vc.performSegue(withIdentifier: "SignUp", sender: nil)
                 }
             }
+            
         } else {
             vc.view.dismissProgress()
             _ = SCLAlertView().showError("Error!", subTitle: "Fill all of the gaps!", closeButtonTitle:"OK")

@@ -16,13 +16,17 @@ class LoginModel {
         if mail != "" && pass != "" {
             Auth.auth().signIn(withEmail: mail, password: pass) { (user, error) in
                 if error != nil {
-                    SCLAlertView().showError("Error!", subTitle: "\(error!.localizedDescription)", closeButtonTitle: "OK")
+                    SCLAlertView().showError("Error!",
+                    subTitle: "\(error!.localizedDescription)",
+                    closeButtonTitle: "OK")
                 } else {
                     vc.performSegue(withIdentifier: "LogIn", sender: nil)
                 }
             }
         } else {
-            SCLAlertView().showError("Error!", subTitle: "Fill all of the gaps!", closeButtonTitle: "OK")
+            SCLAlertView().showError("Error!",
+            subTitle: "Fill all of the gaps!",
+            closeButtonTitle: "OK")
         }
     }
 }

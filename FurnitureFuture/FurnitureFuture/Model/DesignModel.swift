@@ -25,11 +25,11 @@ class DesignModel {
     func placeARObject(selectedItem: String?, hitTest: [ARHitTestResult], tapLocation: CGPoint, sceneView: ARSCNView) {
         let hitResult: ARHitTestResult?
         if !hitTest.isEmpty {
-            print("touched a hroizontal")
             hitResult = hitTest.first!
             
             if selectedItem == nil {
-                SCLAlertView().showInfo("Any Item Choosen", subTitle: "Choose item to decorate your room in: Menu>Add Furniture>Items")
+                SCLAlertView().showInfo("Any Item Choosen",
+                subTitle: "Choose item to decorate your room in: Menu>Add Furniture>Items")
             } else {
                 if  let selectedItem = selectedItem {
                     let scene = SCNScene(named: "Models.scnassets/\(selectedItem).scn")
@@ -40,14 +40,17 @@ class DesignModel {
                 if node != nil {
                     sceneView.scene.rootNode.addChildNode(node!)
                 } else {
-                    _ = SCLAlertView().showError("Error!", subTitle:"There is a problem with the path for AR resources we are Appologize for this problem :)", closeButtonTitle:"OK")
+                    _ = SCLAlertView().showError("Error!",
+                    subTitle:"There is a problem with the path for AR resources we are Appologize for this problem"
+                    , closeButtonTitle:"OK")
                 }
                 }
             }
             
             
         } else {
-            SCLAlertView().showInfo("No Match with the ground!", subTitle: "Lets aim your camera into the ground to put on it subjects!")
+            SCLAlertView().showInfo("No Match with the ground!",
+            subTitle: "Lets aim your camera into the ground to put on it subjects!")
         }
     }
     
@@ -57,7 +60,9 @@ class DesignModel {
             let node = results.node
             node.removeFromParentNode()
         } else {
-            SCLAlertView().showError("Not Matched With Any Object!", subTitle: "To remove an object just direct your camera into the object and try to center it on the screen!", closeButtonTitle: "Ok")
+            SCLAlertView().showError("Not Matched With Any Object!",
+            subTitle: "To remove an object just direct your camera into the object and try to center it on the screen!",
+            closeButtonTitle: "Ok")
         }
     }
     
